@@ -7,8 +7,7 @@ import SEO from "../components/seo";
 import LayoutContactMe from "../components/layout/layout-contact-me";
 import styles from "../css/home.css";
 
-const IndexPage = () => (
-
+export const IndexPage = () => (
     <LayoutContactMe bgClassName="home">
       <Helmet>
         <title>Tien Pham</title>
@@ -17,13 +16,19 @@ const IndexPage = () => (
       <section css={styles.dataSection}>
         <div css={styles.dataContainer}>
           <div css={styles.dataContent}>
-            <h1>Hello</h1>
-            <h2>I'm Tien</h2>
+            <div css={styles.landingText}>
+            <span>&lt; Hello</span>
+            <br></br>
+            <span>My name is Tien</span>
+            <br></br>
+            <span>Welcome to my website /&gt;</span>
+            </div>
           </div>
         </div>
       </section>
     </LayoutContactMe>
 )
+
 
 export default IndexPage
 

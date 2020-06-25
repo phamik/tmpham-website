@@ -38,6 +38,9 @@ const styles = {
       font-weight: 700;
     }
   `,
+  landingText: css`
+  font-size: 5rem;
+  `,
 }
 
 export default styles
