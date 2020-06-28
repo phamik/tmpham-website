@@ -76,12 +76,12 @@ const styles = {
     .contactme-open {
       pointer-events: auto;
     }
-    .contactme-container {
+    .menu-container {
       margin: 5em 0;
       color: #fff;
       width: 100%;
     }
-    .contactme-info {
+    .menu-contact { 
       font-size: 1.5rem;
       display: block;
       width: 75%;
@@ -97,23 +97,41 @@ const styles = {
         font-size: 1.3rem;
       }
     }
+    .menu-links {
+      font-size: 1.5rem;
+      display: block;
+      width: 75%;
+      margin: 0 auto;
+      padding: 0.85em 0;
+      text-align: center;
+      transform: translate3d(0, 20px, 0);
+      p {
+        margin-bottom: 0;
+      }
+      ${media40em} {
+        font-size: 1.3rem;
+      }
+    }
+    #link-option:hover {
+      text-decoration: underline;
+    }
     .contactme-open .btn-contactme-close {
       opacity: 1;
       transform: scale3d(1, 1, 1);
     }
-    .contactme-container,
-    .contactme-info {
+    .menu-container,
+    .menu-links {
       opacity: 0;
       transform: translate3d(0, 150px, 0);
       transition: opacity 1s, transform 1s;
       transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     }
-    .contactme-open .contactme-container,
-    .contactme-open .contactme-info {
+    .contactme-open .menu-container,
+    .contactme-open .menu-links {
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
-    .contactme-open .contactme-info {
+    .contactme-open .menu-links {
       transition-delay: 0.35s;
     }
   `,

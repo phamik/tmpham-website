@@ -1,35 +1,36 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import {Helmet} from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
-import { Global, css } from "@emotion/core"
-import Obfuscate from "react-obfuscate"
-import styles from "./contact-me.css"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import {Helmet} from "react-helmet";
+import { StaticQuery, graphql, Link } from "gatsby";
+import { Global, css } from "@emotion/core";
+import Obfuscate from "react-obfuscate";
+import styles from "./menu.css";
+import { Menu as MenuButton} from "@styled-icons/entypo/Menu";
 
-const LayoutContactMe = ({ children, bgClassName }) => {
-  const [isContactOpen, setIsContactOpen] = useState(false)
+const Menu = ({ children, bgClassName }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  function openContact() {
-    setIsContactOpen(true)
+  function openMenu() {
+    setIsMenuOpen(true)
   }
 
-  function closeContact() {
-    setIsContactOpen(false)
+  function closeMenu() {
+    setIsMenuOpen(false)
   }
 
-  function contactButton() {
+  function menuButton() {
     return (
       <div css={styles.contactContactme}>
         <button
           css={[styles.btn, styles.btnContactme]}
-          className="btn-contact-color"
-          onClick={openContact}
-          title="Contact me"
-          data-test="contactme"
+          className="btn-menu-color"
+          onClick={openMenu}
+          title="Menu"
+          data-test="menu"
         >
-          <svg className="icon">
-            <use xlinkHref="#icon-contact"></use>
-          </svg>
+          <div className="icon">
+            <MenuButton />
+          </div>
         </button>
       </div>
     )
@@ -39,24 +40,7 @@ const LayoutContactMe = ({ children, bgClassName }) => {
     return (
       <svg className="hidden">
         <defs>
-          <symbol id="icon-contact" viewBox="0 0 483.3 483.3">
-            <title>contact</title>
-            <g>
-              <g>
-                <path
-                  d="M424.3,57.75H59.1c-32.6,0-59.1,26.5-59.1,59.1v249.6c0,32.6,26.5,59.1,59.1,59.1h365.1c32.6,0,59.1-26.5,59.1-59.1
-    v-249.5C483.4,84.35,456.9,57.75,424.3,57.75z M456.4,366.45c0,17.7-14.4,32.1-32.1,32.1H59.1c-17.7,0-32.1-14.4-32.1-32.1v-249.5
-    c0-17.7,14.4-32.1,32.1-32.1h365.1c17.7,0,32.1,14.4,32.1,32.1v249.5H456.4z"
-                />
-                <path
-                  d="M304.8,238.55l118.2-106c5.5-5,6-13.5,1-19.1c-5-5.5-13.5-6-19.1-1l-163,146.3l-31.8-28.4c-0.1-0.1-0.2-0.2-0.2-0.3
-    c-0.7-0.7-1.4-1.3-2.2-1.9L78.3,112.35c-5.6-5-14.1-4.5-19.1,1.1c-5,5.6-4.5,14.1,1.1,19.1l119.6,106.9L60.8,350.95
-    c-5.4,5.1-5.7,13.6-0.6,19.1c2.7,2.8,6.3,4.3,9.9,4.3c3.3,0,6.6-1.2,9.2-3.6l120.9-113.1l32.8,29.3c2.6,2.3,5.8,3.4,9,3.4
-    c3.2,0,6.5-1.2,9-3.5l33.7-30.2l120.2,114.2c2.6,2.5,6,3.7,9.3,3.7c3.6,0,7.1-1.4,9.8-4.2c5.1-5.4,4.9-14-0.5-19.1L304.8,238.55z"
-                />
-              </g>
-            </g>
-          </symbol>
+
           <symbol id="icon-cross" viewBox="0 0 24 24">
             <title>cross</title>
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
@@ -108,24 +92,54 @@ const LayoutContactMe = ({ children, bgClassName }) => {
     return (
       <>
         {svgIcos()}
-        <div className={`contact${isContactOpen ? " contactme-open" : ""}`}>
+        <div className={`contact${isMenuOpen ? " contactme-open" : ""}`}>
           <button
             css={[styles.btn, styles.blackPgColor]}
             className="btn-contactme-close"
             aria-label="Close contact me"
             title="Close contact me"
             data-test="contactmeClose"
-            onClick={closeContact}
+            onClick={closeMenu}
           >
             <svg className="icon">
               <use xlinkHref="#icon-cross" />
             </svg>
           </button>
-          <div className="contactme-container">
-            <div css={styles.contactMe}>
-              Let's Make Something Great Together
+          <div className="menu-container">
+            <div className="menu-links">
+              <Link
+                id="link-option"
+                to="/"
+                style={{
+                  color: `white`,
+                  textDecoration: `underline`,
+                  marginRight: `4%`,
+                }}
+              >
+                About Me
+              </Link>
+              <Link
+                to="/"
+                style={{
+                  color: `white`,
+                  textDecoration: `underline`,
+                  marginRight: `4%`,
+                }}
+              >
+                Skills
+              </Link>
+              <Link
+                to="/"
+                style={{
+                  color: `white`,
+                  textDecoration: `underline`,
+                }}
+              >
+                Portfolio
+              </Link>
             </div>
-            <div className="contactme-info">
+            
+            <div className="menu-contact">
               <p>Get in touch with me on</p>
               <p>
                 {Object.entries(social).map(([key, value]) => {
@@ -164,10 +178,6 @@ const LayoutContactMe = ({ children, bgClassName }) => {
                 Or drop me an email at{" "}
                 <Obfuscate
                   email={email}
-                  headers={{
-                    subject: "Come join us!",
-                    body: "We want you in our team, we have pizza friday",
-                  }}
                 />
               </p>
             </div>
@@ -240,14 +250,14 @@ const LayoutContactMe = ({ children, bgClassName }) => {
                 <html lang="en" />
               </Helmet>
               {contactContent(social, email)}
-              <div className={`page${isContactOpen ? " page-move" : ""}`}>
+              <div className={`page${isMenuOpen ? " page-move" : ""}`}>
                 <div css={styles.pageTab} className="tab"></div>
                 <div css={styles.pageTab} className="tab"></div>
                 <div css={styles.pageTab} className="tab"></div>
                 <div css={styles.mainContainer} className="tab">
                   <div className="layout-inner">
                     <div css={styles.layoutMagin}>
-                      {contactButton()}
+                      {!isMenuOpen && menuButton()}
                     </div>
                     <div css={styles.pageContainer}>{children}</div>
                   </div>
@@ -261,9 +271,9 @@ const LayoutContactMe = ({ children, bgClassName }) => {
   )
 }
 
-LayoutContactMe.propTypes = {
+Menu.propTypes = {
   children: PropTypes.node.isRequired,
   bgClassName: PropTypes.string,
 }
 
-export default LayoutContactMe
+export default Menu

@@ -49,12 +49,12 @@ const styles = css`
   .experience .hamburgercolr::after {
     background-color: #fff;
   }
-  .home .btn-contact-color,
-  .experience .btn-contact-color {
+  .home .btn-menu-color,
+  .experience .btn-menu-color {
     color: #fff;
   }
-  .aboutme .btn-contact-color,
-  .e404 .btn-contact-color {
+  .aboutme .btn-menu-color,
+  .e404 .btn-menu-color {
     color: #000;
   }
 `

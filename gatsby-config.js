@@ -1,19 +1,19 @@
 module.exports = {
   siteMetadata: {
     siteName: `Tien Pham`,
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Tien Pham Portfolio`,
+    description: `My personal portfolio`,
+    author: `Tien Pham`,
     title: `Welcome`,
-    email: ``,
+    email: `tien.phamminh95@gmail.com`,
     siteKeywords: ``,
     siteDescription: ``,
     social: {
       // Usernames
-      twitter: ``,
-      gitHub: ``,
-      stackOverflow: ``,
-      linkedIn: ``,
+      twitter: `phamik95`,
+      gitHub: `phamik`,
+      stackOverflow: `13788016/tien-pham`,
+      linkedIn: `in/tien-pham-minh`,
       resumeInPdf: ``, // url or local link
     },
     footer: `heart`,

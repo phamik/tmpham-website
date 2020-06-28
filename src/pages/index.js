@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet";
 import Layout from "../components/layout/index";
 import Image from "../components/image";
 import SEO from "../components/seo";
-import LayoutContactMe from "../components/layout/layout-contact-me";
+import Menu from "../components/layout/menu";
 import styles from "../css/home.css";
 
 export const IndexPage = () => (
-    <LayoutContactMe bgClassName="home">
+    <Menu bgClassName="home">
       <Helmet>
         <title>Tien Pham</title>
         <meta charset="UTF-8" />
@@ -17,16 +17,14 @@ export const IndexPage = () => (
         <div css={styles.dataContainer}>
           <div css={styles.dataContent}>
             <div css={styles.landingText}>
-            <span>&lt; Hello</span>
-            <br></br>
-            <span>My name is Tien</span>
-            <br></br>
-            <span>Welcome to my website /&gt;</span>
+            <h1>&lt; Hello</h1>
+            <h1>My name is Tien</h1>
+            <h1>Welcome to my website /&gt;</h1>
             </div>
           </div>
         </div>
       </section>
-    </LayoutContactMe>
+    </Menu>
 )
 
 

@@ -39,7 +39,7 @@ const styles = {
     }
   `,
   landingText: css`
-  font-size: 5rem;
+
   `,
 }
 
