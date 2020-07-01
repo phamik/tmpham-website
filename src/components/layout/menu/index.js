@@ -119,7 +119,7 @@ const Menu = ({ children, bgClassName }) => {
                 About Me
               </Link>
               <Link
-                to="/"
+                to="/skills"
                 style={{
                   color: `white`,
                   textDecoration: `underline`,
