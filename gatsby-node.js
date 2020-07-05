@@ -17,7 +17,6 @@ const organizeSlash = path => {
 exports.onPreBootstrap = ({ store, reporter }) => {
   const { program } = store.getState()
   const dirs = [
-    path.join(program.directory, "src/experience"),
     path.join(program.directory, "src/images"),
     path.join(program.directory, "src/utils"),
   ]
@@ -34,14 +33,13 @@ exports.onCreatePage = ({ page, actions }, themeOptions) => {
   let { basePath } = themeOptions
   const components = [
     "ComponentAboutMe",
-    "ComponentExperience",
     "ComponentIndex",
     "ComponentSkills",
   ]
 
   if (
     basePath &&
-    /gatsby-theme-byfolio\/src\/pages/g.test(page.componentPath) &&
+    /pages/g.test(page.componentPath) &&
     components.includes(page.internalComponentName)
   ) {
     const { createPage, deletePage } = actions
@@ -64,7 +62,7 @@ exports.onCreateNode = ({ node, getNode, actions }, themeOptions) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: `pages`,
+      basePath: `markdown-pages`,
     })
     createNodeField({
       node,
@@ -72,39 +70,41 @@ exports.onCreateNode = ({ node, getNode, actions }, themeOptions) => {
       value: `${basePath}${slug}`,
     })
     // Adds Skills that you have on your own but hides them in work experience
-    createNodeField({
-      node,
-      name: `hideOnExperience`,
-      value: /\/_additionalSkills.*$/.test(node.fileAbsolutePath),
-    })
+    // createNodeField({
+    //   node,
+    //   name: `hideOnExperience`,
+    //   value: /\/skills.*$/.test(node.fileAbsolutePath),
+    // })
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions
+//   const result = await graphql(`
+//     query {
+//       allMarkdownRemark {
+//         edges {
+//           node {
+//             frontmatter {
+//               slug
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: require.resolve(`./src/templates/job.js`),
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
-  })
-}
+//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+//     createPage({
+//       // path: node.fields.slug,
+//       path: `/skills`,
+//       component: require.resolve(`./src/templates/skills.js`),
+//       context: {
+//         // Data passed to context is available
+//         // in page queries as GraphQL variables.
+//         // slug: node.fields.slug,
+//       },
+//     })
+//   })
+// }
+

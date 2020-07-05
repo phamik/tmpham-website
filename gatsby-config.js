@@ -1,5 +1,8 @@
 module.exports = {
   siteMetadata: {
+    basePath: ``,
+    path: `${__dirname}/src/`,
+    imagesPath: `${__dirname}/src/images/`,
     siteName: `Tien Pham`,
     title: `Tien Pham Portfolio`,
     description: `My personal portfolio`,
@@ -20,13 +23,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -50,10 +46,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `./src/pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

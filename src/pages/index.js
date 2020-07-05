@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../components/layout/index";
-import Image from "../components/image";
 import SEO from "../components/seo";
 import Menu from "../components/layout/menu";
 import styles from "../css/home.css";
