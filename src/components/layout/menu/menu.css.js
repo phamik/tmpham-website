@@ -163,16 +163,17 @@ const styles = {
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
     min-height: 100%;
+    min-width: 100%
   `,
   contactContactme: css`
     position: absolute;
     top: 1.15em;
     right: 1.25em;
-    z-index: 1;
+    z-index: 7;
     ${media40em} {
       font-size: 0.85em;
       position: absolute;
-      top: 2.15em;
+
       right: 2em;
     }
   `,

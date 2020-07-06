@@ -1,15 +1,13 @@
 import { css } from "@emotion/core"
 
+// made position fixed here so the page is not scrollable and doesnt shift both the menu bar and the content 
+
 const styles = {
   layout: css`
     margin-bottom: 1.45rem;
     position: relative;
     z-index: 4;
-  `,
-  pageContainer: css`
-    margin: 0px auto;
-    padding: 1vmin 4em 0;
-    flex: auto;
+    top: 5rem;
   `,
 }
 

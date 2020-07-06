@@ -3,13 +3,13 @@ import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import styles from "./layout.css"
-// import Menu from "../menu"
+import Navbar from "../navbar/Navbar";
 
 const Layout = ({
   title,
   children,
   bgClassName,
-  // fixedMenuPosition = false,
+  fixedMenuPosition = false,
 }) => {
   return (
     <div className={`layout-wrapper ${bgClassName || "white"}`}>
@@ -50,16 +50,9 @@ const Layout = ({
             </Helmet>
             <div className="layout-inner">
               <div css={styles.layout}>
-                {/* <Menu
-                  bgClassName={bgClassName}
-                  numPoints={18}
-                  duration={600}
-                  delayPointsMax={300}
-                  delayPerPath={100}
-                  // fixedMenuPosition={fixedMenuPosition}
-                /> */}
+                <Navbar />
+                {children}
               </div>
-              <div css={styles.pageContainer}>{children}</div>
             </div>
           </>
         )}

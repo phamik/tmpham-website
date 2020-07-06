@@ -3,6 +3,10 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Skill from "../components/skill"
+import Menu from "../components/layout/menu";
+import styles from "../css/home.css";
+import Navbar from "../components/navbar/Navbar"
+
 
 export default ({ data, transitionStatus }) => {
   let allSkills = []
@@ -40,6 +44,7 @@ export default ({ data, transitionStatus }) => {
       <Helmet>
         <title>Skills</title>
       </Helmet>
+
       <Skill
         skills={allSkills}
         type="scrollable"

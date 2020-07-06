@@ -11,6 +11,16 @@ module.exports = {
     email: `tien.phamminh95@gmail.com`,
     siteKeywords: ``,
     siteDescription: ``,
+    menuLinks: [
+      // title = Link text
+      // color = Animation background color on click
+      { name: `home`, title: `Home`, color: `#000`, link: `` },
+      { name: `experience`, title: `Experience`, color: `#3a3d98`, link: `` },
+      { name: `skills`, title: `Skills`, color: `#d52d43`, link: `` },
+      { name: `aboutMe`, title: `About Me`, color: `#fff`, link: `` },
+      // { name: ``, title: `Batman`, link: `/imBatman`, color: `yellow` },
+    ],
+    email: `christian@davidibarguen.com`,
     social: {
       // Usernames
       twitter: `phamik95`,
@@ -19,24 +29,39 @@ module.exports = {
       linkedIn: `in/tien-pham-minh`,
       resumeInPdf: ``, // url or local link
     },
+    shapeColor: {
+      link: { color: "#171616", hover: "#fff" },
+      shape1: {
+        color: `#413f46`,
+        opacity: `0.7`,
+      },
+      shape2: {
+        color: `#e6e5ea`,
+        opacity: `0.7`,
+      },
+      shape3: {
+        color: `#fff`,
+        opacity: `0.7`,
+      },
+    },
     footer: `heart`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `gatsby-starter-default`,
+    //     short_name: `starter`,
+    //     start_url: `/`,
+    //     background_color: `#663399`,
+    //     theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-transition-link`,
       options: {

@@ -30,9 +30,9 @@ const styles = css`
   }
   .skill.layout-wrapper .layout-inner {
     color: #fff;
-    background: #9d316e;
+    background: #282B2F;
     background: url(${lineSvg}) center center fixed,
-      linear-gradient(45deg, #9d316e, #de2d3e);
+      linear-gradient(45deg, ##282B2F, #de2d3e);
     background-size: cover;
   }
   .experience.layout-wrapper .layout-inner {

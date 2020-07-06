@@ -5,6 +5,7 @@ import Layout from "../components/layout/index";
 import SEO from "../components/seo";
 import Menu from "../components/layout/menu";
 import styles from "../css/home.css";
+import Navbar from "../components/navbar/Navbar"
 
 export const IndexPage = () => (
     <Menu bgClassName="home">

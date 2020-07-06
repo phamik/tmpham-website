@@ -41,6 +41,11 @@ const styles = {
   landingText: css`
 
   `,
+  layout: css`
+    margin-bottom: 1.45rem;
+    position: relative;
+    z-index: 4;
+  `,
 }
 
 export default styles

@@ -6,6 +6,8 @@ import { Global, css } from "@emotion/core";
 import Obfuscate from "react-obfuscate";
 import styles from "./menu.css";
 import { Menu as MenuButton} from "@styled-icons/entypo/Menu";
+import { Contacts as MessageIcon } from "@styled-icons/remix-line/Contacts";
+import Navbar from "../../navbar/Navbar";
 
 const Menu = ({ children, bgClassName }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -29,7 +31,7 @@ const Menu = ({ children, bgClassName }) => {
           data-test="menu"
         >
           <div className="icon">
-            <MenuButton />
+            <MessageIcon />
           </div>
         </button>
       </div>
@@ -257,9 +259,12 @@ const Menu = ({ children, bgClassName }) => {
                 <div css={styles.mainContainer} className="tab">
                   <div className="layout-inner">
                     <div css={styles.layoutMagin}>
+                      <Navbar />
                       {!isMenuOpen && menuButton()}
                     </div>
-                    <div css={styles.pageContainer}>{children}</div>
+                    <div css={styles.pageContainer}>
+                      {children}
+                    </div>
                   </div>
                 </div>
               </div>
