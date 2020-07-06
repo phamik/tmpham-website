@@ -108,39 +108,6 @@ const Menu = ({ children, bgClassName }) => {
             </svg>
           </button>
           <div className="menu-container">
-            <div className="menu-links">
-              <Link
-                id="link-option"
-                to="/"
-                style={{
-                  color: `white`,
-                  textDecoration: `underline`,
-                  marginRight: `4%`,
-                }}
-              >
-                About Me
-              </Link>
-              <Link
-                to="/skills"
-                style={{
-                  color: `white`,
-                  textDecoration: `underline`,
-                  marginRight: `4%`,
-                }}
-              >
-                Skills
-              </Link>
-              <Link
-                to="/"
-                style={{
-                  color: `white`,
-                  textDecoration: `underline`,
-                }}
-              >
-                Portfolio
-              </Link>
-            </div>
-            
             <div className="menu-contact">
               <p>Get in touch with me on</p>
               <p>

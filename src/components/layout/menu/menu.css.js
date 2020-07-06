@@ -30,13 +30,13 @@ const styles = {
       transition: transform 1s;
       transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
       &:first-of-type {
-        background: #3d3d3d;
+        background: #bbbbbb;
       }
       &:nth-of-type(2) {
         background: #848484;
       }
       &:nth-of-type(3) {
-        background: #bbbbbb;
+        background: #3d3d3d;
       }
     }
     .page-move {

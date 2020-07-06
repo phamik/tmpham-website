@@ -42,7 +42,7 @@ export default ({ data, transitionStatus }) => {
   return (
     <Layout title={`Skills`} bgClassName={`skill`} fixedMenuPosition={true}>
       <Helmet>
-        <title>Skills</title>
+        <title>Skills | Tien Pham</title>
       </Helmet>
 
       <Skill

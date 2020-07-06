@@ -12,12 +12,13 @@ const Navigation = styled.nav`
   text-transform: uppercase;
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
-  padding: 0 5vw;
+  padding: 0 3rem;
   z-index: 10;
   align-self: center;
   margin-bottom: 1.5rem;
   @media (max-width: 768px) {
     /* position: sticky; */
+    padding: 0 2rem;
     position: fixed;
     height: 8vh;
     top: 0;

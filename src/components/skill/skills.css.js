@@ -76,7 +76,7 @@ const styles = {
     pointer-events: none;
   `,
   header: css`
-    padding: 0 3vmax;
+    padding: 0 0.8vmax;
   `,
   headerStatic: css`
     position: relative;

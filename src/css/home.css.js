@@ -11,8 +11,13 @@ const styles = {
   dataContainer: css`
     margin: 0 auto;
     padding: 0 3rem;
-    max-width: 700px;
-    height: 100%;
+    margin-top: 10%;
+    /* max-width: 700px; */
+    /* height: 100%; */
+    @media only screen and (max-width: 480px) {
+    margin-top: 20%;
+    padding: 0 2rem;
+  }  
   `,
   dataContent: css`
     position: relative;
@@ -36,9 +41,6 @@ const styles = {
       padding: 39.5px 0;
       font-weight: 700;
     }
-  `,
-  landingText: css`
-
   `,
   layout: css`
     margin-bottom: 1.45rem;

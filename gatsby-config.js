@@ -20,7 +20,6 @@ module.exports = {
       { name: `aboutMe`, title: `About Me`, color: `#fff`, link: `` },
       // { name: ``, title: `Batman`, link: `/imBatman`, color: `yellow` },
     ],
-    email: `christian@davidibarguen.com`,
     social: {
       // Usernames
       twitter: `phamik95`,
