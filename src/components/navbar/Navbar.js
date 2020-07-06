@@ -22,8 +22,8 @@ const Navigation = styled.nav`
     height: 8vh;
     top: 0;
     left: 0;
-    right: 0;
-    left: 0;
+    /* right: 0; */
+    width: 80%;
   }
 `
 
@@ -48,7 +48,7 @@ const Navbox = styled.div`
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: black;
+    background-color: #63686E;
     transition: all 0.3s ease-in;
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
@@ -56,7 +56,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: #ffff;
   width: 30px;
   height: 3px;
   transition: all .3s linear;
@@ -67,7 +67,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: #ffff;
     content: "";
     position: absolute;
     transition: all 0.3s linear;

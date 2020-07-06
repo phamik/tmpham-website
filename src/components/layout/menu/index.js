@@ -259,8 +259,8 @@ const Menu = ({ children, bgClassName }) => {
                 <div css={styles.mainContainer} className="tab">
                   <div className="layout-inner">
                     <div css={styles.layoutMagin}>
-                      <Navbar />
                       {!isMenuOpen && menuButton()}
+                      <Navbar />
                     </div>
                     <div css={styles.pageContainer}>
                       {children}

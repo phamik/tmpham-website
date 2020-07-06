@@ -33,7 +33,6 @@ const styles = {
       float: left;
       line-height: 0px;
       font-size: 0.74rem;
-      font-family: sans-serif;
       padding: 39.5px 0;
       font-weight: 700;
     }

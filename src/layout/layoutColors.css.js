@@ -2,6 +2,9 @@ import { css } from "@emotion/core"
 import lineSvg from "../../static/assets/line.svg"
 
 const styles = css`
+  .layout-wrapper { 
+    background-color: #63686E;
+  }
   .e404.layout-wrapper .layout-inner {
     background: #fff;
   }
@@ -31,23 +34,6 @@ const styles = css`
   .skill.layout-wrapper .layout-inner {
     color: #fff;
     background: #282B2F;
-    background: url(${lineSvg}) center center fixed,
-      linear-gradient(45deg, ##282B2F, #de2d3e);
-    background-size: cover;
-  }
-  .experience.layout-wrapper .layout-inner {
-    background: #3a3d98;
-    background: url(${lineSvg}) center center fixed,
-      linear-gradient(45deg, #6f22b9, #3a3d98);
-    background-size: cover;
-  }
-  .home .hamburgercolr::before,
-  .home .hamburgercolr::after,
-  .skill .hamburgercolr::before,
-  .skill .hamburgercolr::after,
-  .experience .hamburgercolr::before,
-  .experience .hamburgercolr::after {
-    background-color: #fff;
   }
   .home .btn-menu-color,
   .experience .btn-menu-color {
@@ -55,7 +41,7 @@ const styles = css`
   }
   .aboutme .btn-menu-color,
   .e404 .btn-menu-color {
-    color: #000;
+    color: #fff;
   }
 `
 

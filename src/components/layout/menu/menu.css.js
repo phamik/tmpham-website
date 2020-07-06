@@ -150,7 +150,7 @@ const styles = {
     align-items: center;
     width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #63686E;
     background-repeat: no-repeat;
     background-position: 50% 10em;
     background-size: 75% auto;
@@ -188,10 +188,16 @@ const styles = {
     outline: none;
     &:focus {
       outline: none;
+      ::after {
+      width: 100%;
+    }
     }
   `,
   btnContactme: css`
     font-size: 1.5em;
+    &:hover {
+    color: goldenrod;
+    }
   `,
   contactMe: css`
     font-size: 1.8rem;
