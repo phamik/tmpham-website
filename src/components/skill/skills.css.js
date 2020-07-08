@@ -37,6 +37,7 @@ const styles = {
   section: css`
     width: 100%;
     padding: 0 3vmax;
+    z-index: 4;
     h2 {
       margin: 0 0 1rem;
       font-size: 3rem;

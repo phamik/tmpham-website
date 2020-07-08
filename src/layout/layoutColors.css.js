@@ -7,9 +7,11 @@ const styles = css`
   }
   .e404.layout-wrapper .layout-inner {
     background: #fff;
+    background-color: white;
   }
   .e404 .data-section {
     color: #000;
+    background-color: white;
   }
   .aboutme.layout-wrapper .layout-inner {
     background: #fff;

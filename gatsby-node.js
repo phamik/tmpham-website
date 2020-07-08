@@ -69,42 +69,6 @@ exports.onCreateNode = ({ node, getNode, actions }, themeOptions) => {
       name: `slug`,
       value: `${basePath}${slug}`,
     })
-    // Adds Skills that you have on your own but hides them in work experience
-    // createNodeField({
-    //   node,
-    //   name: `hideOnExperience`,
-    //   value: /\/skills.*$/.test(node.fileAbsolutePath),
-    // })
   }
 }
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-//   const result = await graphql(`
-//     query {
-//       allMarkdownRemark {
-//         edges {
-//           node {
-//             frontmatter {
-//               slug
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-//     createPage({
-//       // path: node.fields.slug,
-//       path: `/skills`,
-//       component: require.resolve(`./src/templates/skills.js`),
-//       context: {
-//         // Data passed to context is available
-//         // in page queries as GraphQL variables.
-//         // slug: node.fields.slug,
-//       },
-//     })
-//   })
-// }
 

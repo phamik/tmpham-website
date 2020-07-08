@@ -4,6 +4,7 @@ const styles = css`
   html {
     box-sizing: border-box;
     overflow-y: auto;
+    height: 100%;
   }
   *,
   *::after,
@@ -22,7 +23,7 @@ const styles = css`
     margin: 0;
     color: hsla(0, 0%, 0%, 0.8);
     background: #282b2f;
-    overflow: hidden;
+    overflow: hidden; 
     min-height: 100vh;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
@@ -52,7 +53,7 @@ const styles = css`
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height: fill-available;
@@ -80,12 +81,6 @@ const styles = css`
     bottom: 0;
     right: 0;
     height: 34.5px;
-  }
-  .copy .heart {
-    margin: 2px 4px;
-  }
-  .copy .hand {
-    margin: 0 4px;
   }
   .copy svg {
     display: inline-block;

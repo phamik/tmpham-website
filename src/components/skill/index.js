@@ -83,9 +83,6 @@ const Skill = ({
         <h2 css={cssStyles.h2}>{title}</h2>
         <p css={cssStyles.p}>{description}</p>
       </header>
-      {/* TODO: Find a workaround for this */}
-      {/* It appears that AniLink causes the page to render many times */}
-      {/* {transitionStatus === "exited" ? ( */}
       <Delay
         wait={1000}
         cb={handleLoad}
@@ -97,13 +94,6 @@ const Skill = ({
           </ul>
         </div>
       </Delay>
-      {/* ) : (
-          <div css={cssStyles.div}>
-            <ul css={styles.grid} ref={gridRef}>
-              {getSkills()}
-            </ul>
-          </div>
-        )} */}
       <div css={styles.gridHeight} ref={gridHeightRef}></div>
     </main>
   )

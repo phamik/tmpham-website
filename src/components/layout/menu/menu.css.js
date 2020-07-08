@@ -163,8 +163,12 @@ const styles = {
     margin: 0 auto;
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
+    /* height: 100vh; */
     min-height: 100%;
     min-width: 100%;
+    @-moz-document url-prefix() { 
+      height: 100vh;
+    }
 
     position: relative;
     overflow: hidden;
@@ -185,8 +189,8 @@ const styles = {
       -ms-transform: rotate(20deg);
       -o-transform: rotate(20deg);
       transform: rotate(20deg);
-      filter: blur(10px);
-      -webkit-filter: blur(10px);
+      filter: blur(12px);
+      -webkit-filter: blur(12px);
       @media only screen and (max-width: 480px) {
         background-position: right 30% center;
         background-size: 50%;

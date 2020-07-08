@@ -3,6 +3,7 @@ import { Global } from "@emotion/core"
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "./layout.css"
 import styleColors from "./layoutColors.css"
+import Obfuscate from "react-obfuscate";
 
 
 export default ({ children }) => {
@@ -11,6 +12,7 @@ export default ({ children }) => {
     {
       site {
         siteMetadata {
+          email
           footer
         }
       }
@@ -18,9 +20,13 @@ export default ({ children }) => {
   `
   const {
     site: {
-      siteMetadata: { footer },
+      siteMetadata: {
+        email
+      }
     },
   } = useStaticQuery(siteQuery)
+
+  const year = new Date().getFullYear();
 
   return (
     <>
@@ -31,12 +37,12 @@ export default ({ children }) => {
         </div>
         <div className="copy">
           <a
-            href="https://github.com/phamik"
+            href="https://www.linkedin.com/in/tien-pham-minh/"
             rel="noopener noreferrer"
             className="nolink"
             target="_blank"
           >
-            Made by Tien Pham 
+            &copy; {year} Tien Pham 
           </a>
         </div>
       </div>

@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Logo from "../../images/logo/logo-goldenrod-transparent.png";
-// import Logo from "./Logo"
 
 const NavItem = styled(Link)`
   text-decoration: none;

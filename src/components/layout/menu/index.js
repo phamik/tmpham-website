@@ -228,7 +228,6 @@ const Menu = ({ children, bgClassName }) => {
                       {!isMenuOpen && menuButton()}
                       <Navbar />
                     </div>
-                    {/* <div css={styles.logoBackground}></div>                     */}
                     <div css={styles.pageContainer}>
                       {children}
                     </div>

@@ -17,13 +17,11 @@ const Navigation = styled.nav`
   align-self: center;
   margin-bottom: 1.5rem;
   @media (max-width: 768px) {
-    /* position: sticky; */
     padding: 0 2rem;
     position: fixed;
     height: 8vh;
     top: 0;
     left: 0;
-    /* right: 0; */
     width: 80%;
   }
 `

@@ -7,10 +7,9 @@ module.exports = {
     title: `Tien Pham Portfolio`,
     description: `My personal portfolio`,
     author: `Tien Pham`,
-    title: `Welcome`,
     email: `tmpham95@gmail.com`,
-    siteKeywords: `Web Developer, Front-end Developer`,
-    siteDescription: `This site shows a little bit about me and my work`,
+    siteKeywords: `Web Developer, Front-end Developer, Web Design, React.js`,
+    siteDescription: `Tien Pham: This site shows a little bit about me and my work`,
     social: {
       // Usernames
       twitter: `phamik95`,
@@ -72,8 +71,11 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`${__dirname}/src/pages/*`],
+      },
+    },
   ],
 }

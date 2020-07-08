@@ -3,16 +3,11 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Skill from "../components/skill"
-import Menu from "../components/layout/menu";
-import styles from "../css/home.css";
-import Navbar from "../components/navbar/Navbar"
 
 
 export default ({ data, transitionStatus }) => {
   let allSkills = []
-  // allSkills = data.allMarkdownRemark.nodes[0]
   if (((data || {}).allMarkdownRemark || {}).edges) {
-    // Select non duplicated skills from all jobs
     allSkills = data.allMarkdownRemark.edges.reduce(
       (
         mySkills,

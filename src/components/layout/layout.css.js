@@ -6,8 +6,7 @@ import logo from "../../images/logo/logo-goldenrod-transparent.png";
 const styles = {
   layout: css`
     margin-bottom: 1.45rem;
-    position: relative;
-    z-index: 4;
+    position: fixed;
     top: 5rem;
 
     position: relative;
@@ -29,8 +28,8 @@ const styles = {
       -ms-transform: rotate(20deg);
       -o-transform: rotate(20deg);
       transform: rotate(20deg);
-      filter: blur(10px);
-      -webkit-filter: blur(10px);
+      filter: blur(12px);
+      -webkit-filter: blur(12px);
       @media only screen and (max-width: 480px) {
         background-position: right 30% center;
         background-size: 50%;
