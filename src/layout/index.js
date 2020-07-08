@@ -31,12 +31,12 @@ export default ({ children }) => {
         </div>
         <div className="copy">
           <a
-            href="https://github.com/"
+            href="https://github.com/phamik"
             rel="noopener noreferrer"
             className="nolink"
             target="_blank"
           >
-            Made by tp_studios
+            Made by Tien Pham 
           </a>
         </div>
       </div>

@@ -15,9 +15,9 @@ const styles = {
     /* max-width: 700px; */
     /* height: 100%; */
     @media only screen and (max-width: 480px) {
-    margin-top: 20%;
-    padding: 0 2rem;
-  }  
+      margin-top: 20%;
+      padding: 0 2rem;
+    }  
   `,
   dataContent: css`
     position: relative;
@@ -30,17 +30,11 @@ const styles = {
   dataTopbar: css`
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    height: 80px;
-    z-index: 1;
-    p {
-      float: left;
-      line-height: 0px;
-      font-size: 0.74rem;
-      padding: 39.5px 0;
-      font-weight: 700;
-    }
+    right: 20px;
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
+    /* height: 80px; */
+    z-index: 3;
   `,
   layout: css`
     margin-bottom: 1.45rem;

@@ -100,10 +100,6 @@ const styles = css`
     font-size: 0.75em;
     font-weight: 500;
   }
-  .heart {
-    font-size: 0.55em;
-    color: #c83d64;
-  }
   .nolink:hover {
     color: #fff;
     text-decoration: none;
@@ -140,6 +136,9 @@ const styles = css`
   a:focus {
     color: #74777b;
     outline: none;
+    &:hover {
+    color: goldenrod;
+    }
   }
   .hidden {
     position: absolute;

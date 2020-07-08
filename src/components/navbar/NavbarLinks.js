@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Logo from "../../images/logo/logo-goldenrod-transparent.png";
+// import Logo from "./Logo"
 
 const NavItem = styled(Link)`
   text-decoration: none;
@@ -34,12 +36,24 @@ const NavItem = styled(Link)`
     z-index: 6;
   }
 `
+
+const LogoLink = styled(Link)`
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 1vw;
+  position: relative;
+
+`;
+
 const NavbarLinks = () => {
   return (
     <>
+      <LogoLink className="logo-link" to="/"><img style={{maxHeight: "2rem"}} src={Logo} alt="Logo" /></LogoLink>
       <NavItem to="/">Home</NavItem>
       <NavItem to="/about-me">About Me</NavItem>
       <NavItem to="/skills">Skills</NavItem>
+      
     </>
   )
 }

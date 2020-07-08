@@ -6,21 +6,22 @@ import SEO from "../components/seo";
 import Menu from "../components/layout/menu";
 import styles from "../css/home.css";
 import Navbar from "../components/navbar/Navbar"
+import AnimatedIntroString from "../components/typewriter/typewriter";
+import Logo from "../components/navbar/Logo";
 
 export const IndexPage = () => (
     <Menu bgClassName="home">
       <Helmet>
-        <title>Tien Pham</title>
+        <title>Welcome! 👋 | Tien Pham</title>
         <meta charset="UTF-8" />
       </Helmet>
       <section css={styles.dataSection}>
         <div css={styles.dataContainer}>
           <div css={styles.dataContent}>
-            <div css={styles.landingText}>
-            <h1>&lt; Hello</h1>
-            <h1>My name is Tien</h1>
-            <h1>Welcome to my website /&gt;</h1>
-            </div>
+            {/* <div css={styles.dataTopbar}>
+              <Logo/>
+            </div> */}
+            <AnimatedIntroString/>
           </div>
         </div>
       </section>

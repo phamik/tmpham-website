@@ -1,5 +1,6 @@
 import { css } from "@emotion/core"
 import mediaQueryGenerator from "../../../utils/mediaQGen"
+import logo from "../../../images/logo/logo-goldenrod-transparent.png";
 
 const [media40em] = mediaQueryGenerator([{ type: "max", size: "40" }])
 
@@ -163,7 +164,34 @@ const styles = {
     padding: 0px 1.0875rem 1.45rem;
     padding-top: 0;
     min-height: 100%;
-    min-width: 100%
+    min-width: 100%;
+
+    position: relative;
+    overflow: hidden;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      z-index: 0;
+      background: url(${logo});
+      background-repeat: no-repeat;
+      background-position: right 45% center;
+      background-size: 25%;
+      -webkit-transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+      -o-transform: rotate(20deg);
+      transform: rotate(20deg);
+      filter: blur(10px);
+      -webkit-filter: blur(10px);
+      @media only screen and (max-width: 480px) {
+        background-position: right 30% center;
+        background-size: 50%;
+      } 
+    }
   `,
   contactContactme: css`
     position: absolute;

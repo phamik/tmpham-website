@@ -1,8 +1,20 @@
 import React from 'react';
-import './typewriter.css';
+import styled from "styled-components"
 import Typewriter from "typewriter-effect"
 import { graphql, useStaticQuery } from "gatsby"
 import GraphemeSplitter from "grapheme-splitter"
+
+const TypewriterIntroString = styled.div`
+   font-size: 3.5em;
+   font-weight: 900;
+    margin-top: 20%;
+
+   @media (max-width: 768px) {
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 70%;
+   }
+`;
 
 const AnimatedIntroString = () => {
   // const data = useStaticQuery(graphql`
@@ -21,10 +33,11 @@ const AnimatedIntroString = () => {
   const wave = '\u{1F44B}';
   return (
     <section>
+    {/* <div className="animated-string-wrapper">
       <Typewriter
         options={{
-          wrapperClassName: "animated-string-wrapper",
-          cursorClassName: "animated-cursor-wrapper",
+          // wrapperClassName: "animated-string-wrapper",
+          // cursorClassName: "animated-cursor-wrapper",
           strings: "Hi, My Name is Tien",
           autoStart: true,
           // loop: true,
@@ -32,7 +45,22 @@ const AnimatedIntroString = () => {
           stringSplitter
         }}
       />
+    </div> */}
+    <TypewriterIntroString>
+    <Typewriter
+      onInit={(typewriter) => {
+        typewriter.typeString('<  Hello! ' + stringSplitter(wave) + ' <br />')
+          .typeString('&nbsp;&nbsp; My name is Tien and <br />')
+          // .typeString('I am a web developer ' + stringSplitter('👨‍💻'))
+          .typeString('&nbsp;&nbsp; I am a web developer <br />')
+          .typeString('/> ' )
+          .pauseFor(2500)
+          .start();
+      }}
+    />
+    </TypewriterIntroString>
     </section>
+
   )
 }
 

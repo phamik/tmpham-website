@@ -19,7 +19,6 @@ const Layout = ({
             site {
               siteMetadata {
                 title
-
                 siteKeywords
                 siteDescription
               }

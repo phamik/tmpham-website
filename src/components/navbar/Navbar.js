@@ -51,7 +51,7 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: #63686E;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    /* top: 8vh; */
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `
@@ -63,6 +63,7 @@ const Hamburger = styled.div`
   transition: all .3s linear;
   align-self: center;
   position: fixed;
+  z-index: 7;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
   ::before,
   ::after {
