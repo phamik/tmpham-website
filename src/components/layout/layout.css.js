@@ -9,6 +9,11 @@ const styles = {
     position: fixed;
     top: 5rem;
 
+    @media only screen and (max-width: 480px) {
+      z-index: 1;
+      width: 100%;
+    }
+
     position: relative;
     overflow: hidden;
     &::before{

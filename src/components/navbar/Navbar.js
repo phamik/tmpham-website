@@ -10,7 +10,6 @@ const Navigation = styled.nav`
   position: fixed;
   justify-content: space-between;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 3rem;
   z-index: 10;
