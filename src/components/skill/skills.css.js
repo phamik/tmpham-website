@@ -157,7 +157,7 @@ const styles = {
   `,
   gridImgContainer: css`
     position: relative;
-    cursor: pointer;
+    cursor: initial;
     z-index: 1;
     display: block;
   `,
