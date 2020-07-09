@@ -50,6 +50,7 @@ const styles = {
       padding: 0;
       font-weight: 700;
       max-width: 60%;
+      font-size: 1.2em;
       ${media50em} {
         font-size: 1em;
         line-height: 1.2em;

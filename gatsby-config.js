@@ -77,5 +77,6 @@ module.exports = {
         precachePages: [`${__dirname}/src/pages/*`],
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }

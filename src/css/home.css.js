@@ -71,6 +71,16 @@ const styles = {
         font-size: 2.4rem;
       }
     }
+    p {
+      padding: 0;
+      font-weight: 700;
+      font-size: 1.2em;
+      ${media50em} {
+        font-size: 1em;
+        line-height: 1.2em;
+        max-width: 500px;
+      }
+    }
   `,
 }
 

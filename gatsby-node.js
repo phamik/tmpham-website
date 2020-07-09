@@ -72,3 +72,13 @@ exports.onCreateNode = ({ node, getNode, actions }, themeOptions) => {
   }
 }
 
+exports.createPages = ({ actions }) => {
+  const { createRedirect } = actions;
+  createRedirect({
+    fromPath: "https://tien-pham.netlify.app/*", 
+    toPath: "https://www.tmpham.com/", 
+    isPermanent: true, 
+    force: true
+  });
+};
+

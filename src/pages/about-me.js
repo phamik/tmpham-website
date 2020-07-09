@@ -18,24 +18,24 @@ export const IndexPage = (data) => (
               <h1>
                 About me
               </h1>
-              <h2>
+              <p>
               I am a web developer who is passionate about web design and writing code that translates into robust and user-friendly experiences. 
-              </h2>
-              <h2>
+              </p>
+              <p>
               I have been working in a digital consultancy for over 2 years. 
               Turning clients’ ambitions into reality from the design process up until delivery of the software. 
-              </h2>
-              <h2>
+              </p>
+              <p>
               It is the application of technology in businesses that particularly interest me. 
               This is also why the majority of my time as a developer has been around the e-commerce space. Helping 
               clients build software that will further allow them to reach their business goals.
-              </h2>
-              <h2>
+              </p>
+              <p>
               Check out <a href={CV} download>my CV</a> for more about my experience or find out more about what I can do <Link to="/skills">here</Link> ! 
-              </h2>
-              <h2>
+              </p>
+              <p>
                 If you would like to work with me or simply have a chat, feel free to reach out (button on the top right corner). 
-              </h2>
+              </p>
             </div>
           </div>
         </div>

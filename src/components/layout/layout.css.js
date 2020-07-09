@@ -1,12 +1,9 @@
 import { css } from "@emotion/core"
 import logo from "../../images/logo/logo-goldenrod-transparent.png";
 
-// made position fixed here so the page is not scrollable and doesnt shift both the menu bar and the content 
-
 const styles = {
   layout: css`
     margin-bottom: 1.45rem;
-    position: fixed;
     top: 5rem;
 
     @media only screen and (max-width: 480px) {
