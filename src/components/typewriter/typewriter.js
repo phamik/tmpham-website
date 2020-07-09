@@ -26,8 +26,12 @@ const AnimatedIntroString = () => {
     <section>
       <TypewriterIntroString>
         <Typewriter
+          options={{
+            delay: 50,
+          }}
+          stringSplitter
           onInit={(typewriter) => {
-            typewriter.typeString('<  Hello! ' + stringSplitter(wave) + ' <br />')
+            typewriter.typeString('<  Hello! <span role="img" aria-label="eave">👋</span> ' + ' <br />')
               .typeString('&nbsp;&nbsp; My name is Tien and <br />')
               .typeString('&nbsp;&nbsp; I am a web developer <br />')
               .typeString('/> ' )
