@@ -26,7 +26,7 @@ export const IndexPage = (data) => (
               Turning clients’ ambitions into reality from the design process up until delivery of the software. 
               </p>
               <p>
-              It is the application of technology in businesses that particularly interest me. 
+              It is the application of technology in businesses that particularly interests me. 
               This is also why the majority of my time as a developer has been around the e-commerce space. Helping 
               clients build software that will further allow them to reach their business goals.
               </p>
