@@ -26,6 +26,8 @@ const styles = {
       ${media40em} {
         perspective-origin: 50% -10%;
       }
+      height: 96vh;
+      overflow: hidden;
     }
     .tab {
       transition: transform 1s;
