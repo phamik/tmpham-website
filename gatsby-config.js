@@ -3,6 +3,7 @@ module.exports = {
     basePath: ``,
     path: `${__dirname}/src/`,
     imagesPath: `${__dirname}/src/images/`,
+    siteUrl: `https://tmpham.com/`,
     siteName: `Tien Pham`,
     title: `Tien Pham Portfolio`,
     description: `My personal portfolio`,
