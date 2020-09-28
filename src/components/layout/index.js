@@ -20,14 +20,13 @@ const Layout = ({
               siteMetadata {
                 title
                 siteKeywords
-                siteDescription
               }
             }
           }
         `}
         render={({
           site: {
-            siteMetadata: { title: siteTitle, siteKeywords, siteDescription },
+            siteMetadata: { title: siteTitle, siteKeywords },
           },
         }) => (
           <>
@@ -36,7 +35,7 @@ const Layout = ({
               meta={[
                 {
                   name: "description",
-                  content: siteDescription,
+                  content: "A list of some of the capabilities I have as a software developer.",
                 },
                 {
                   name: "keywords",
