@@ -9,7 +9,7 @@ module.exports = {
     author: `Tien Pham`,
     email: `tmpham95@gmail.com`,
     siteKeywords: `Web Developer, Front-end Developer, Web Design, React.js`,
-    siteDescription: `Tien Pham: This site shows a little bit about me and my work`,
+    siteDescription: `Welcome to my website! Come and find out more about me!`,
     social: {
       // Usernames
       twitter: `phamik95`,

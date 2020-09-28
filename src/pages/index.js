@@ -7,7 +7,7 @@ import AnimatedIntroString from "../components/typewriter/typewriter";
 export const IndexPage = () => (
     <Menu bgClassName="home">
       <Helmet>
-        <title>Welcome! 👋 | Tien Pham</title>
+        <title>Welcome! | Tien Pham</title>
         <meta charset="UTF-8" />
       </Helmet>
       <section css={styles.dataSection}>

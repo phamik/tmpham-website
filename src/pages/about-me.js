@@ -31,7 +31,7 @@ export const IndexPage = (data) => (
               clients build software that will further allow them to reach their business goals.
               </p>
               <p>
-              Check out <a href={CV} target="_blank">my CV</a> for more about my experience or find out more about what I can do <Link to="/skills">here</Link> ! 
+              Check out <a href={CV} target="_blank" rel="noreferrer">my CV</a> for more about my experience or find out more about what I can do <Link to="/skills">here</Link> ! 
               </p>
               <p>
                 If you would like to work with me or simply have a chat, feel free to reach out (button on the top right corner). 
