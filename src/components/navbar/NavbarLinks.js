@@ -45,13 +45,13 @@ const LogoLink = styled(Link)`
 
 `;
 
-const NavbarLinks = () => {
+const NavbarLinks = ({mobile}) => {
   return (
     <>
       <LogoLink className="logo-link" to="/"><img style={{maxHeight: "2rem"}} src={Logo} alt="Logo" /></LogoLink>
       <NavItem to="/">Home</NavItem>
       <NavItem to="/about-me">About Me</NavItem>
-      <NavItem to="/skills">Skills</NavItem>
+      {mobile ? (<NavItem to="/skills">Skills</NavItem>) : null } 
       
     </>
   )

@@ -31,7 +31,7 @@ const AnimatedIntroString = () => {
           }}
           stringSplitter
           onInit={(typewriter) => {
-            typewriter.typeString('<  Hello! <span role="img" aria-label="eave">👋</span> ' + ' <br />')
+            typewriter.typeString('<  Hello! <span role="img" aria-label="wave">👋</span> ' + ' <br />')
               .typeString('&nbsp;&nbsp; My name is Tien and <br />')
               .typeString('&nbsp;&nbsp; I am a web developer <br />')
               .typeString('/> ' )
