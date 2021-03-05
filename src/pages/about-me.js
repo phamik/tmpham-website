@@ -3,9 +3,13 @@ import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import Menu from "../components/layout/menu";
 import styles from "../css/home.css";
-import CV from "../../static/TienPham-CV-2020.pdf";
+import CV from "../../static/TienPham-CV-2021.pdf";
+import { useMediaQuery } from '../components/hooks/useMediaQuery';
 
-export const IndexPage = (data) => (
+function IndexPage(data) {
+  const isPageWide = useMediaQuery('(min-width: 750px)');
+
+  return (
     <Menu bgClassName="home">
       <Helmet>
         <title>About me | Tien Pham</title>
@@ -30,9 +34,13 @@ export const IndexPage = (data) => (
               This is also why the majority of my time as a developer has been around the e-commerce space. Helping 
               clients build software that will further allow them to reach their business goals.
               </p>
-              <p>
-              Check out <a href={CV} target="_blank" rel="noreferrer">my CV</a> for more about my experience or find out more about what I can do <Link to="/skills">here</Link> ! 
-              </p>
+              
+              {isPageWide &&
+                <p>
+                Check out <a href={CV} target="_blank" rel="noreferrer">my CV</a> for more about my experience or find out more about what I can do <Link to="/skills">here</Link> ! 
+                </p>
+              }
+              
               <p>
                 If you would like to work with me or simply have a chat, feel free to reach out (button on the top right corner). 
               </p>
@@ -42,6 +50,8 @@ export const IndexPage = (data) => (
       </section>
     </Menu>
 )
+}
+
 
 
 export default IndexPage

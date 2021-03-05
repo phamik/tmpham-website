@@ -17,7 +17,7 @@ module.exports = {
       gitHub: `phamik`,
       stackOverflow: `13788016/tien-pham`,
       linkedIn: `in/tien-pham-minh`,
-      resumeInPdf: `/TienPham-CV-2020.pdf`, // url or local link
+      resumeInPdf: `/TienPham-CV-2021.pdf`, // url or local link
     },
     footer: `${__dirname}/src/images/logo/logo-black-back.png`,
   },

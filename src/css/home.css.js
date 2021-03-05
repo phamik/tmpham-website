@@ -61,7 +61,7 @@ const styles = {
       width: 50%;
     }  
     @media only screen and (max-width: 480px) {
-      font-size: 70%;
+      font-size: 100%;
     }  
     h1 {
       margin: 0 0 1rem;
