@@ -45,17 +45,21 @@ const LogoLink = styled(Link)`
   position: relative;
 `
 
-function NavbarLinks({ mobile }) {
+const ActiveLinkStyle = {
+  color: 'goldenrod'
+}
+
+function NavbarLinks() {
   const isPageWide = useMediaQuery("(min-width: 750px)")
 
   return (
     <>
-      <LogoLink className="logo-link" to="/">
+      <LogoLink className="logo-link" to="/" activeStyle={ActiveLinkStyle}>
         <img style={{ maxHeight: "2rem" }} src={Logo} alt="Logo" />
       </LogoLink>
-      <NavItem to="/">Home</NavItem>
-      <NavItem to="/about-me">About Me</NavItem>
-      {isPageWide ? <NavItem to="/skills">Skills</NavItem> : null}
+      <NavItem to="/" activeStyle={ActiveLinkStyle}>Home</NavItem>
+      <NavItem to="/about-me" activeStyle={ActiveLinkStyle}>About Me</NavItem>
+      {isPageWide ? <NavItem to="/skills" activeStyle={ActiveLinkStyle}>Skills</NavItem> : null}
     </>
   )
 }

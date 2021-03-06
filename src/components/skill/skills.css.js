@@ -160,6 +160,9 @@ const styles = {
     cursor: initial;
     z-index: 1;
     display: block;
+    &:hover {
+      cursor: pointer;
+    }
   `,
   gridImg: css`
     ${gridImage}

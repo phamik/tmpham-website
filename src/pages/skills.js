@@ -45,8 +45,8 @@ export default ({ data, transitionStatus }) => {
         type="scrollable"
         title="Skills"
         description="These are the skills that I have acquired through my years of
-            experience working as a software developer, the order is based on
-            the ones I like most and or I have used."
+            experience working as a software developer, the skills go beyond various technologies and 
+            I also have experience with various UX design tools"
         transitionStatus={transitionStatus}
       />
     </Layout>
@@ -62,6 +62,7 @@ export const query = graphql`
           frontmatter {
             skills {
               title
+              url
               image {
                 childImageSharp {
                   fluid(maxWidth: 200) {

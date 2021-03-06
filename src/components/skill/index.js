@@ -37,8 +37,8 @@ const Skill = ({
     return !loaded ? (
       <></>
     ) : (
-      skills.map(({ title, image }) => (
-        <AnimateItem type={type} title={title} key={title} image={image} />
+      skills.map(({ title, image, url }) => (
+        <AnimateItem type={type} title={title} key={title} image={image} url={url} />
       ))
     )
   }

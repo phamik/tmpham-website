@@ -97,11 +97,11 @@ const Navbar = () => {
       
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks mobile={false}/>
+          <NavbarLinks />
         </Navbox>
       ) : (
         <Navbox open>
-          <NavbarLinks mobile={true} />
+          <NavbarLinks />
         </Navbox>
       )}
     </Navigation>

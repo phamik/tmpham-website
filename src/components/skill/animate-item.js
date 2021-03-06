@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import anime from "animejs"
 import styles from "./skills.css"
 
-function AnimateItem({ type, title, image }) {
+function AnimateItem({ type, title, image, url }) {
   const imgArray = Array(4).fill("")
   const ref = useRef(null)
   const imageRef = useRef()
@@ -95,47 +95,49 @@ function AnimateItem({ type, title, image }) {
   }, [type])
 
   return (
-    <li
-      css={type === "static" ? styles.gridItemStatic : styles.gridItem}
-      ref={ref}
-    >
-      <div css={styles.gridImgContainer}>
-        {type === "static" ? (
-          imgArray.map((_item, index) => (
-            <div
-              css={styles.gridImgStatic}
-              key={`anImg${index}`}
-              ref={imagesRef.current[index]}
-              style={
-                index !== 0
-                  ? {
-                      position: "absolute",
-                      overflow: "visible",
-                    }
-                  : {
-                      overflow: "visible",
-                    }
-              }
-            >
-              <Img fluid={image.childImageSharp.fluid} alt={title} />
-            </div>
-          ))
-        ) : (
-          <>
-            <div css={styles.gridImg} ref={imageRef}>
-              <Img
-                fluid={image.childImageSharp.fluid}
-                style={{
-                  overflow: "visible",
-                }}
-                alt={title}
-              />
-            </div>
-            <span css={styles.gridTitle}>{title}</span>
-          </>
-        )}
-      </div>
-    </li>
+    <a href={url} target="_blank">
+      <li
+        css={type === "static" ? styles.gridItemStatic : styles.gridItem}
+        ref={ref}
+      >
+        <div css={styles.gridImgContainer}>
+          {type === "static" ? (
+            imgArray.map((_item, index) => (
+              <div
+                css={styles.gridImgStatic}
+                key={`anImg${index}`}
+                ref={imagesRef.current[index]}
+                style={
+                  index !== 0
+                    ? {
+                        position: "absolute",
+                        overflow: "visible",
+                      }
+                    : {
+                        overflow: "visible",
+                      }
+                }
+              >
+                <Img fluid={image.childImageSharp.fluid} alt={title} />
+              </div>
+            ))
+          ) : (
+            <>
+              <div css={styles.gridImg} ref={imageRef}>
+                <Img
+                  fluid={image.childImageSharp.fluid}
+                  style={{
+                    overflow: "visible",
+                  }}
+                  alt={title}
+                />
+              </div>
+              <span css={styles.gridTitle}>{title}</span>
+            </>
+          )}
+        </div>
+      </li>
+    </a>
   )
 }
 AnimateItem.propTypes = {
